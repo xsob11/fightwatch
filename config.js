@@ -5,8 +5,8 @@
 (function (global) {
   "use strict";
   var BASE_BY_MODE = {
-    prod: "https://martialmatch.andruwik777.workers.dev",
-    test: "https://test-martialmatch.andruwik777.workers.dev",
+    prod: "https://fightwatch-proxy.tomasz-jakubowski11.workers.dev",
+    test: "https://fightwatch-proxy.tomasz-jakubowski11.workers.dev",
   };
   var loc = global.location;
   var pageParams =
