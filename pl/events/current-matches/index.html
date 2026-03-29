@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FightWatch — Live</title>
+  <link rel="stylesheet" href="../../../app.css">
+</head>
+<body>
+  <header class="fw-header">
+    <div class="fw-header__inner">
+      <a class="fw-logo" href="../">
+        <div class="fw-logo__icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <span class="fw-logo__name">FightWatch</span>
+      </a>
+      <div class="fw-header__meta">
+        <a class="fw-back fw-nav-link" href="../">← zawody</a>
+        <span class="fw-slug" id="fw-slug-label"></span>
+      </div>
+    </div>
+  </header>
+  <main class="fw-main">
+    <div class="fw-notify-bar is-hidden" id="fw-notify-bar">
+      <span class="fw-notify-bar__icon">🔔</span>
+      <span class="fw-notify-bar__text">Alert 30 i 5 min przed walką — głośny sygnał, wibracja, powiadomienie.</span>
+      <button class="fw-notify-bar__btn" id="fw-notify-btn" type="button">Włącz</button>
+    </div>
+    <div id="fw-error" class="fw-alert fw-alert--error is-hidden" role="alert"></div>
+    <div id="fw-content">
+      <div class="fw-filter is-hidden" id="fw-filter-root">
+        <button type="button" class="fw-filter-btn" id="fw-filter-main-btn">
+          <span id="fw-filter-btn-label">Filtruj zawodników</span>
+          <span class="fw-filter-btn__chevron" aria-hidden="true">
+            <svg width="12" height="8" viewBox="0 0 12 8"><path fill="currentColor" d="M6 8L0 0h12L6 8z"/></svg>
+          </span>
+        </button>
+        <div class="fw-filter-panel is-hidden" id="fw-filter-panel" aria-hidden="true">
+          <p class="fw-filter-status" id="fw-filter-status"></p>
+          <div class="fw-filter-box">
+            <div class="fw-club-jump-wrap is-hidden" id="fw-club-jump-wrap">
+              <div class="fw-club-jump" id="fw-club-jump-root">
+                <button type="button" class="fw-club-jump__btn" id="fw-club-jump-toggle"
+                  aria-expanded="false" aria-haspopup="listbox" aria-controls="fw-club-jump-list">
+                  <span>Skocz do klubu</span>
+                  <span class="fw-club-jump__chevron" aria-hidden="true">
+                    <svg width="12" height="8" viewBox="0 0 12 8"><path fill="currentColor" d="M6 8L0 0h12L6 8z"/></svg>
+                  </span>
+                </button>
+                <ul class="fw-club-jump__list is-hidden" id="fw-club-jump-list" role="listbox"></ul>
+              </div>
+            </div>
+            <div class="fw-filter-scroll">
+              <div class="fw-filter-sticky fw-filter-sticky--desktop">
+                <button type="button" class="fw-filter-apply" id="fw-apply-desktop">Zastosuj filtr</button>
+              </div>
+              <div class="fw-filter-list" id="fw-filter-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fw-muted" id="fw-placeholder">Ładowanie walk…</p>
+      <div class="fw-toolbar is-hidden" id="fw-toolbar" aria-live="polite"></div>
+      <div class="fw-fights" id="fw-fights"></div>
+    </div>
+  </main>
+  <div class="fw-mobile-bar" id="fw-mobile-bar" aria-hidden="true">
+    <button type="button" class="fw-filter-apply" id="fw-apply-mobile">Zastosuj filtr</button>
+  </div>
+  <div class="fw-toast" id="fw-toast" aria-live="assertive" aria-atomic="true"></div>
+  <script src="../../../config.js"></script>
+  <script src="current-matches.js" defer></script>
+</body>
+</html>

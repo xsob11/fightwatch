@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FightWatch</title>
+  <link rel="stylesheet" href="../../app.css">
+</head>
+<body>
+  <header class="fw-header">
+    <div class="fw-header__inner">
+      <a class="fw-logo" href="">
+        <div class="fw-logo__icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <span class="fw-logo__name">FightWatch</span>
+      </a>
+      <div class="fw-header__meta">
+        <a href="https://martialmatch.com/pl/events" target="_blank" rel="noopener">martialmatch.com</a>
+      </div>
+    </div>
+  </header>
+  <main class="fw-main">
+    <p class="fw-status" id="fw-status" aria-live="polite"></p>
+    <div class="fw-events" id="fw-events-list"></div>
+  </main>
+  <script src="../../config.js"></script>
+  <script src="events.js" defer></script>
+</body>
+</html>
