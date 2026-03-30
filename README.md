@@ -19,7 +19,35 @@ poprzez Cloudflare Worker proxy.
   - Głośny sygnał dźwiękowy (słyszalny na hali sportowej)
   - Wibracja telefonu
 
-
 ## Technologie
 
 Statyczny HTML/CSS/JS · GitHub Pages · Cloudflare Workers
+
+
+# FightWatch
+
+A mobile-optimized martial arts competition browser built for 
+live fight tracking at sports events.
+
+## Based on
+
+This project is built on top of the open-source 
+[MartialMatch](https://github.com/andruwik777/martialmatch) 
+project by **andruwik777**, which provides data from martialmatch.com 
+via a Cloudflare Worker proxy.
+
+## What was added
+
+- **Custom UI design** — dark theme, events grouped by month, 
+  event thumbnails with date overlay
+- **30 and 5 minute alert system** before a tracked athlete's fight:
+  - System push notification (works with screen off)
+  - Loud audio alert (audible in a noisy sports hall)
+  - Phone vibration
+  - In-app toast message
+- Fighter filter saved in URL 
+  (shareable link — others see the same fighters)
+
+## Tech stack
+
+Static HTML/CSS/JS · GitHub Pages · Cloudflare Workers
